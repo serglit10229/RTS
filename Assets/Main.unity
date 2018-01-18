@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 607406313}
-  m_IndirectSpecularColor: {r: 0.18329301, g: 0.22892618, b: 0.30629778, a: 1}
+  m_IndirectSpecularColor: {r: 0.18330565, g: 0.22894028, b: 0.30630648, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -313,7 +313,7 @@ GameObject:
   - component: {fileID: 77476129}
   m_Layer: 0
   m_Name: Unit1 (2)
-  m_TagString: Untagged
+  m_TagString: SelectableUnit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2055,7 +2055,7 @@ GameObject:
   - component: {fileID: 741470329}
   m_Layer: 0
   m_Name: Unit1 (1)
-  m_TagString: Untagged
+  m_TagString: SelectableUnit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4455,6 +4455,7 @@ GameObject:
   - component: {fileID: 1728564192}
   - component: {fileID: 1728564195}
   - component: {fileID: 1728564193}
+  - component: {fileID: 1728564194}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4550,9 +4551,22 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1728564186}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe90e0937e3c67d4386b7c7a7c38ea06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectionCirclePrefab: {fileID: 166266, guid: ff37f7c0a70cd9041ba05cc6090f4396,
+    type: 2}
+--- !u!114 &1728564194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1728564186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 679057cae795e42a2a0baae85c0d15c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   selectionCirclePrefab: {fileID: 166266, guid: ff37f7c0a70cd9041ba05cc6090f4396,
@@ -4998,7 +5012,7 @@ GameObject:
   - component: {fileID: 1915813629}
   m_Layer: 0
   m_Name: Unit1
-  m_TagString: Untagged
+  m_TagString: SelectableUnit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
