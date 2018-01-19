@@ -19,6 +19,7 @@ public class SkeletAnimator : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         float speedPercent = agent.velocity.magnitude / agent.speed;
-        animator.SetFloat("speedPercent", speedPercent, locomotionAnimationSmoothTime, Time.deltaTime);
+        animator.SetFloat("Speed", speedPercent, locomotionAnimationSmoothTime, Time.deltaTime);
+		Debug.Log (speedPercent);
 	}
 }
