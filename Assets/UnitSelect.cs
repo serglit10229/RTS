@@ -35,11 +35,11 @@ public class UnitSelect : MonoBehaviour {
 						selectableObject.selectionCircle = Instantiate (selectionCirclePrefab);
 						selectableObject.selectionCircle.transform.SetParent (selectableObject.transform, false);
 						selectableObject.selectionCircle.transform.eulerAngles = new Vector3 (90, 0, 0);
-						prevSelect = selectableObject;
+						//prevSelect = selectableObject;
 					}
 					if (selected == true) {
-						Destroy (prevSelect.selectionCircle.gameObject);
-						prevSelect.selectionCircle = null;
+						//Destroy (prevSelect.selectionCircle.gameObject);
+						//prevSelect.selectionCircle = null;
 						//Debug.Log ("Foreach");
 						selectableObject.selectionCircle = Instantiate (selectionCirclePrefab);
 						selectableObject.selectionCircle.transform.SetParent (selectableObject.transform, false);
@@ -49,8 +49,8 @@ public class UnitSelect : MonoBehaviour {
 				else 
 				{
 					SelectableUnitComponent selectableObject = hit.collider.GetComponent<SelectableUnitComponent> ();
-					Destroy (prevSelect.selectionCircle.gameObject);
-					prevSelect.selectionCircle = null;
+					//Destroy (prevSelect.selectionCircle.gameObject);
+					//prevSelect.selectionCircle = null;
 				}
 			}
 
