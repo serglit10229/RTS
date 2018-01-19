@@ -4320,7 +4320,6 @@ MonoBehaviour:
   selectionCirclePrefab: {fileID: 166266, guid: ff37f7c0a70cd9041ba05cc6090f4396,
     type: 2}
   selected: 0
-  prevSelect: {fileID: 0}
 --- !u!4 &1730976881 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4002246828333360, guid: a5b6531bd8601e34ea81fc1e43782119,

@@ -7,7 +7,7 @@ public class UnitSelect : MonoBehaviour {
 	Camera cam;
 	public GameObject selectionCirclePrefab;
 	public bool selected = false;
-	public GameObject prevSelect; 
+	//public GameObject prevSelect; 
 
 
 	// Use this for initialization
@@ -35,23 +35,26 @@ public class UnitSelect : MonoBehaviour {
 						selectableObject.selectionCircle = Instantiate (selectionCirclePrefab);
 						selectableObject.selectionCircle.transform.SetParent (selectableObject.transform, false);
 						selectableObject.selectionCircle.transform.eulerAngles = new Vector3 (90, 0, 0);
+						selected = true;
+
 						//prevSelect = selectableObject;
 					}
-					if (selected == true) {
-						//Destroy (prevSelect.selectionCircle.gameObject);
-						//prevSelect.selectionCircle = null;
-						//Debug.Log ("Foreach");
-						selectableObject.selectionCircle = Instantiate (selectionCirclePrefab);
-						selectableObject.selectionCircle.transform.SetParent (selectableObject.transform, false);
-						selectableObject.selectionCircle.transform.eulerAngles = new Vector3 (90, 0, 0);
+					if (selected == true ) {
+						if (Input.GetMouseButtonDown (0)) 
+						{
+							Destroy (selectableObject.selectionCircle.gameObject);
+							selectableObject.selectionCircle = null;
+							selected = false;
+						}
 					}
 				} 
+				/*
 				else 
 				{
 					SelectableUnitComponent selectableObject = hit.collider.GetComponent<SelectableUnitComponent> ();
 					//Destroy (prevSelect.selectionCircle.gameObject);
 					//prevSelect.selectionCircle = null;
-				}
+				}*/
 			}
 
 		}
