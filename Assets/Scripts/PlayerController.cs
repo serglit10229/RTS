@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetMouseButtonDown (1)) {
+		if (Input.GetMouseButtonDown (1) && !UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject()) {
 			
 			Ray ray = cam.ScreenPointToRay(Input.mousePosition);
 			RaycastHit hit;
@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour {
 
 		}
 
-		if (Input.GetMouseButtonDown (0)) {
+		if (Input.GetMouseButtonDown (0) && !UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject()) {
 			Ray ray = cam.ScreenPointToRay(Input.mousePosition);
 			RaycastHit hit;
 
