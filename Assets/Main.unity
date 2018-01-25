@@ -113,6 +113,53 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: c0e0f332c21ffc346bfb1f314ca63e2f, type: 2}
+--- !u!1 &10657822
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 10657823}
+  - component: {fileID: 10657824}
+  m_Layer: 0
+  m_Name: SelectionCirclePrefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &10657823
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 10657822}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0.48519325, z: 0}
+  m_LocalScale: {x: 1, y: 1.0000005, z: 1.0000005}
+  m_Children: []
+  m_Father: {fileID: 1915813628}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!119 &10657824
+Projector:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 10657822}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_NearClipPlane: 0.1
+  m_FarClipPlane: 1
+  m_FieldOfView: 60
+  m_AspectRatio: 1
+  m_Orthographic: 1
+  m_OrthographicSize: 0.8
+  m_Material: {fileID: 2100000, guid: 0eba8a9160e330e4bb32540ce2bd8f9a, type: 2}
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 4294967039
 --- !u!1001 &11802477
 Prefab:
   m_ObjectHideFlags: 0
@@ -4319,7 +4366,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectionCirclePrefab: {fileID: 166266, guid: ff37f7c0a70cd9041ba05cc6090f4396,
     type: 2}
-  selected: 0
+  objectSelected: 0
 --- !u!4 &1730976881 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4002246828333360, guid: a5b6531bd8601e34ea81fc1e43782119,
@@ -4730,6 +4777,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1928418456}
+  - {fileID: 10657823}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4744,7 +4792,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92cb42219be57014497e0059634c06a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectionCircle: {fileID: 0}
+  selectionCircle: {fileID: 10657822}
+  selected: 0
+  move: 0
+  attack: 0
+  Highlighted: 0
+  debugDeselect: 0
 --- !u!114 &1915813630
 MonoBehaviour:
   m_ObjectHideFlags: 0
