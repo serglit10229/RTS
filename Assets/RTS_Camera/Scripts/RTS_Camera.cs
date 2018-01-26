@@ -329,6 +329,7 @@ namespace RTS_Cam
         /// calculate distance to ground
         /// </summary>
         /// <returns></returns>
+        
         private float DistanceToGround()
         {
             Ray ray = new Ray(m_Transform.position, Vector3.down);
@@ -338,7 +339,7 @@ namespace RTS_Cam
 
             return 0f;
         }
-
+        
         #endregion
     }
 }

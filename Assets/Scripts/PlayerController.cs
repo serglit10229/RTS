@@ -21,12 +21,12 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetMouseButtonDown (1) && !UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject()) {
+		if (Input.GetMouseButtonDown (1)) {
 			
 			Ray ray = cam.ScreenPointToRay(Input.mousePosition);
 			RaycastHit hit;
 
-			if (Physics.Raycast (ray, out hit, 100, movementMask)) {
+			if (Physics.Raycast (ray, out hit,20000, movementMask)) {
 				motor.MoveToPoint (hit.point);
 				//Move to
 
@@ -36,11 +36,11 @@ public class PlayerController : MonoBehaviour {
 
 		}
 
-		if (Input.GetMouseButtonDown (0) && !UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject()) {
+		if (Input.GetMouseButtonDown (0)) {
 			Ray ray = cam.ScreenPointToRay(Input.mousePosition);
 			RaycastHit hit;
 
-			if (Physics.Raycast (ray, out hit, 100)) {
+			if (Physics.Raycast (ray, out hit, 20000)) {
 				Interactables interactable = hit.collider.GetComponent<Interactables> ();
 				if (interactable != null) 
 				{
