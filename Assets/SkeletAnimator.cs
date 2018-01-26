@@ -20,6 +20,6 @@ public class SkeletAnimator : MonoBehaviour {
 	void Update () {
         float speedPercent = agent.velocity.magnitude / agent.speed;
         animator.SetFloat("Speed", speedPercent, locomotionAnimationSmoothTime, Time.deltaTime);
-		Debug.Log (speedPercent);
+		//Debug.Log (speedPercent);
 	}
 }

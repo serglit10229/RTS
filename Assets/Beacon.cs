@@ -8,6 +8,9 @@ public class Beacon : MonoBehaviour {
     public float y = 5;
     public float z = 0;
 
+	public GameObject Sun;
+	private Light myLight;
+
     // Use this for initialization
     void Start () {
 		
@@ -16,5 +19,24 @@ public class Beacon : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         transform.Rotate(x,y,z);
+
+		myLight = GetComponent<Light>();
+
+		//myLight.enabled = false;
+
+		Debug.Log (Sun.transform.eulerAngles.x);
+
+		if (Sun.transform.eulerAngles.x < 360) 
+		{
+			myLight.enabled = false;	
+			Debug.Log ("false");
+		}
+
+		if (Sun.transform.eulerAngles.x > 0) 
+		{
+			myLight.enabled = true;
+			Debug.Log ("true");
+		}
+
 	}
 }
