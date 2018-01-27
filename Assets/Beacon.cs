@@ -23,7 +23,7 @@ public class Beacon : MonoBehaviour {
 		myLight = GetComponent<Light>();
 
 		//myLight.enabled = false;
-
+        /*
 		Debug.Log (Sun.transform.eulerAngles.x);
 
 		if (Sun.transform.eulerAngles.x < 360) 
@@ -37,6 +37,17 @@ public class Beacon : MonoBehaviour {
 			myLight.enabled = true;
 			Debug.Log ("true");
 		}
-
+        */
 	}
+
+    public void On()
+    {
+        myLight.enabled = true;
+    }
+
+    public void Off()
+    {
+        myLight.enabled = false;
+    }
+
 }
